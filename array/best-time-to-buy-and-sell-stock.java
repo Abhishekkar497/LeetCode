@@ -10,6 +10,9 @@ class Solution {
             }
 
         }
+        if(index == prices.length-1){
+            return 0;
+        }
         for(int i = index+1;i<prices.length;i++){
             int diff = prices[i] -min;
             profit = Math.max(profit,diff);
