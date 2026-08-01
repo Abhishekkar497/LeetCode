@@ -10,7 +10,7 @@ class Solution {
                 }
                 
             }
-            maxVowel = Math.max(count,maxVowel);
+            maxVowel = Math.max(maxVowel,count);
         }
       return maxVowel;
     }
