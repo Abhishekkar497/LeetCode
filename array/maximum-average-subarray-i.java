@@ -13,6 +13,6 @@ class Solution {
              sum +=nums[i];
             maxSum = Math.max(sum,maxSum);
         }
-        return (Double)maxSum/k;
+        return (double)maxSum/k;
     }
 }
