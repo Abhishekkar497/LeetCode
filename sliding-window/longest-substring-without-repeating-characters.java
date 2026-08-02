@@ -3,7 +3,7 @@ class Solution {
         int maxLen = 0;
         int l =0,r=0;
         int hash[] = new int[256];
-         Arrays.fill(hash,0);
+         Arrays.fill(hash,-1);
          int n =s.length();
          while(r < n){
             if(hash[s.charAt(r)] >=l){
