@@ -3,20 +3,18 @@ class Solution {
         if(s.length() != t.length()){
             return false;
         }
-      HashMap <Character,Integer>map = new HashMap<>();
-      
-      for(int i =0;i<s.length();i++){
-        char ch = s.charAt(i);
-        char th = t.charAt(i);
-        map.put(ch,map.getOrDefault(ch,0) + 1);
-        map.put(th,map.getOrDefault(th,0) -1);
-      }
-    for(int freq : map.values()){
-        
-        if(freq != 0){
-            return false;
+        HashMap <Character,Integer> map = new HashMap<>();
+        for(int i =0;i<s.length();i++){
+            char ch = s.charAt(i);
+            char th = t.charAt(i);
+            map.put(ch,map.getOrDefault(ch,0)+1);
+            map.put(th,map.getOrDefault(th,0) -1);
         }
-    }
-    return true;
+        for(int freq : map.values()){
+            if(freq!=0){
+                return false;
+            }
+        }
+        return true;
     }
 }
